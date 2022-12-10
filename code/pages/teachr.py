@@ -15,7 +15,7 @@ def displayPDF(file):
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 def show_pdf(file_path):
-    with open(file_path,"rb") as f:
+    with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
     pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="800" type="application/pdf"></iframe>'
     st.markdown(pdf_display, unsafe_allow_html=True)
@@ -28,7 +28,7 @@ left, right = st.columns([3,1], gap="small")
 
 with left:
     st.header("Aquí va el paper cargado")
-    show_pdf('sample2.pdf')
+    show_pdf("file.pdf")
 
 with right:
     st.header("Aquí irán los conceptos y sus explicaciones")
