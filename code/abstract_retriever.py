@@ -58,5 +58,5 @@ for archive in tqdm(archive_links, desc="Archive", position=0, leave=True, unit=
 
 # Write to a csv file
 df = pd.DataFrame(papers)
-df.to_csv('jair.csv', index=False)
+df.to_csv('data/jair.csv', index=False)
 

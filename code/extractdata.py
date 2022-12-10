@@ -1,6 +1,3 @@
-
-
-
 ## pip install pdfminer.six  package required
 
 from pdfminer.high_level import extract_text
