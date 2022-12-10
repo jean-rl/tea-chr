@@ -34,7 +34,7 @@ def extract_text_from_pdf(path,nonumber=False):
         else:
             paragraph += t + " "
 
-    # Delete paragraphs with less than 25 words
+    # Delete paragraphs with less than 30 words
     paragraphs = [p for p in paragraphs if len(p.split()) > 30]
 
     # Join paragraphs with a new line
