@@ -1,9 +1,8 @@
-from bertopic import BERTopic
-from sklearn.feature_extraction.text import CountVectorizer
+import os
 
 import pandas as pd
+from bertopic import BERTopic
 
-import os
 os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
