@@ -1,9 +1,7 @@
-## pip install pdfminer.six  package required
-
 from pdfminer.high_level import extract_text
 
-# # Extract text from a pdf.
-# # nonumber flag remove all number in texto: default False
+# Extract text from a pdf.
+# nonumber flag remove all number in texto: default False
 def extract_text_from_pdf(path,nonumber=False):
     text = extract_text(path)
 
@@ -24,7 +22,7 @@ def extract_text_from_pdf(path,nonumber=False):
     return S
 
 
-#text=extract_text_from_pdf("remotesensing-13-01082-v2.pdf")
+# text=extract_text_from_pdf("remotesensing-13-01082-v2.pdf")
 
 
 
