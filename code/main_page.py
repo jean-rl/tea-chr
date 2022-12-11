@@ -1,5 +1,6 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
+import os
 
 st.set_page_config(layout="centered", page_icon="☕", page_title="Tea-chr", initial_sidebar_state="collapsed", menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
@@ -16,6 +17,8 @@ st.image("data/sample_image.png", caption="Overview of our tool in work")
 #st.markdown("Get the topics ready before reading!")
 st.info('Get the topics ready before reading!', icon="ℹ️")
 #st.header("Load your paper to start!")
+
+st.write(os.getcwd())
 
 left, mid, right = st.columns([1,1,1])
 #col2.title("Centered! :)") 
