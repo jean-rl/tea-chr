@@ -6,4 +6,5 @@ numpy
 bs4
 clean-text
 tqdm
+pdfminer.six
 pandas
