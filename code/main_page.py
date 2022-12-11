@@ -18,8 +18,8 @@ st.image("data/sample_image.png", caption="Overview of our tool in work")
 st.info('Get the topics ready before reading!', icon="ℹ️")
 #st.header("Load your paper to start!")
 
-for (root,dirs,files) in os.walk(os.getcwd(), topdown=True):
-    st.write(root, dirs, files)
+#for (root,dirs,files) in os.walk(os.getcwd(), topdown=True):
+#    st.write(root, dirs, files)
 
 left, mid, right = st.columns([1,1,1])
 #col2.title("Centered! :)") 

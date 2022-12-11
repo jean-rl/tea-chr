@@ -48,8 +48,8 @@ with left:
     show_pdf("file.pdf")
 
 text = extract_text_from_pdf("file.pdf")
-st.write(os.getcwd())
-topic_model = BERTopic.load("../../models/topic_model-tiny")
+# st.write(os.getcwd())
+topic_model = BERTopic.load("app/tea-chr/models/topic_model-tiny")
 topics, _ = topic_model.transform(text)
 
 for topic in set(topics):
