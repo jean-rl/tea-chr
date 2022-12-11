@@ -2,7 +2,7 @@ import streamlit as st
 import urllib
 import base64
 from streamlit_extras.switch_page_button import switch_page
-from generate_response import *
+from ..generate_response import *
 
 #function to display the PDF of a given file 
 def displayPDF(file):
