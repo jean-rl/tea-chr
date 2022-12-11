@@ -23,12 +23,14 @@ client = storage.Client(credentials=credentials)
 
 def read_file(bucket_name, file_path):
     bucket = client.bucket(bucket_name)
-    content = bucket.blob(file_path).download_as_string().decode("utf-8")
+    #content = bucket.blob(file_path).download_as_string().decode("utf-8")
+    content = bucket.blob(file_path)
     return content
 
 bucket_name = "streamlit-bucket-teachr"
 file_pathx = "topic_model-small"
 
+content = read_file(bucket_name, file_pathx)
 
 #function to display the PDF of a given file 
 def displayPDF(file):
@@ -70,7 +72,7 @@ with left:
 text = extract_text_from_pdf("file.pdf")
 # st.write(os.getcwd())
 #topic_model = BERTopic.load("/app/tea-chr/models/topic_model-tiny")
-topic_model = BERTopic.load(file_pathx)
+topic_model = BERTopic.load(content)
 topics, _ = topic_model.transform(text)
 
 for topic in set(topics):
