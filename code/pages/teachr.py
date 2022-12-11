@@ -8,6 +8,7 @@ from streamlit_extras.switch_page_button import switch_page
 from generate_response import *
 from extractdata import extract_text_from_pdf
 from bertopic import BERTopic
+import os
 
 #function to display the PDF of a given file 
 def displayPDF(file):
@@ -47,6 +48,7 @@ with left:
     show_pdf("file.pdf")
 
 text = extract_text_from_pdf("file.pdf")
+st.write(os.getcwd())
 topic_model = BERTopic.load("../../models/topic_model-tiny")
 topics, _ = topic_model.transform(text)
 
