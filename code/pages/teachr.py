@@ -1,6 +1,8 @@
 import streamlit as st
 import urllib
 import base64
+from streamlit_extras.switch_page_button import switch_page
+from generate_response import *
 
 #function to display the PDF of a given file 
 def displayPDF(file):
@@ -22,15 +24,46 @@ def show_pdf(file_path):
 
 
 st.set_page_config(layout="wide", page_icon="👨‍💼", page_title="Tea-chr", initial_sidebar_state="collapsed")
-st.title("👨‍💼 Tea-chr - a tool to give you background before reading a paper")
+if st.button(label="Home"):
+    switch_page("streamlit")
+st.title("☕ Tea-chr")
+st.markdown("## A tool that gives you the *big picture* before diving into what is **important**")
+st.markdown("-----------------------------------")
 
-left, right = st.columns([3,1], gap="small")
+left, right = st.columns([3,2])
+# left, right = st.columns([3,1]) Try this if you need more space for PDF displaying
 
 with left:
-    st.header("Aquí va el paper cargado")
+    st.header("Your paper")
+    st.markdown("Read the paper in this page")
     show_pdf("file.pdf")
 
 with right:
-    st.header("Aquí irán los conceptos y sus explicaciones")
-    pass
+    # st.header("Aquí irán los conceptos y sus explicaciones")
+    st.header("The main topics")
+    st.markdown("Take a look at the most important topics before diving into the paper...")
+    number = st.number_input('Number of topics to generate', min_value=2, max_value=10, step=1)
+    #subheader = '<p style="font-family:helvetica, sans-serif; color:orange; font-size: 28px;">reward</p>'
+    #st.markdown(subheader, unsafe_allow_html=True)
+    topic = "reward"    
+    st.subheader(topic)
+    response = generate_responses(topic)
+    st.caption(response)
+
+    topic = "policy"
+    st.subheader(topic)
+    response = generate_responses(topic)
+    st.caption(response)
+    
+    topic = "state"
+    st.subheader(topic)
+    response = generate_responses(topic)
+    st.caption(response)
+
+left2, mid, right2 = st.columns([1,1,1])
+
+with mid:
+    st.header("Missing a topic?")
+    st.subheader("Write it down and get a response")
+    
 #displayPDF("https://arxiv.org/pdf/1706.03762.pdf")

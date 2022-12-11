@@ -2,12 +2,21 @@ import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 from pdf_miner import *
 
-st.set_page_config(layout="centered", page_icon="👨‍💼", page_title="Tea-chr", initial_sidebar_state="collapsed")
-st.title("👨‍💼 Tea-chr")
+st.set_page_config(layout="centered", page_icon="☕", page_title="Tea-chr", initial_sidebar_state="collapsed", menu_items={
+        'Get Help': 'https://www.extremelycoolapp.com/help',
+        'Report a bug': "https://www.extremelycoolapp.com/bug",
+        'About': "# This is a header. This is an *extremely* cool app!"
+    })
+st.title("☕ Tea-chr")
 st.header("A tool to give you background before reading a paper")
-st.header("Load your paper to start!")
 
-st.text("Are you about to start reading a paper about a new topic?\nThis tool is perfect for begginer researchers that want to have the background\nbefore jumping to the full topic")
+st.markdown("Are you about to start reading a paper about a new topic? This tool is perfect for begginer researchers that want to have the background before jumping to the full topic")
+
+st.image("sample_image.png", caption="Overview of our tool in work")
+
+#st.markdown("Get the topics ready before reading!")
+st.info('Get the topics ready before reading!', icon="ℹ️")
+#st.header("Load your paper to start!")
 
 left, mid, right = st.columns([1,1,1])
 #col2.title("Centered! :)") 
