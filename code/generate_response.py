@@ -5,8 +5,9 @@ co = cohere.Client('MZEXVdqnzLxLGnxmzNjCLS129C4aF6iEEFejYCGy')
 
 def generate_responses(topic):
 
-    area = "reinforcement learning"
-    prompt = f"explain to me the concept of {topic} in the context of {area}"
+    #area = "reinforcement learning"
+    #prompt = f"explain to me the concept of {topic} in the context of {area}"
+    prompt = f"explain to me the concept of {topic}"
     
     response = co.generate(
     model='command-xlarge-20221108',
