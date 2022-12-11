@@ -11,7 +11,7 @@ st.header("A tool to give you background before reading a paper")
 
 st.markdown("Are you about to start reading a paper about a new topic? This tool is perfect for begginer researchers that want to have the background before jumping to the full topic")
 
-st.image("sample_image.png", caption="Overview of our tool in work")
+st.image("data/sample_image.png", caption="Overview of our tool in work")
 
 #st.markdown("Get the topics ready before reading!")
 st.info('Get the topics ready before reading!', icon="ℹ️")
