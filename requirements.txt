@@ -8,3 +8,4 @@ clean-text
 tqdm
 pdfminer.six
 pandas
+google-cloud-storage
