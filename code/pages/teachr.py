@@ -41,7 +41,9 @@ st.info('Note: For now only Firefox browser renders the PDF without warning. Pla
 with left:
     st.header("Your paper")
     st.markdown("Read the paper in this page")
-    show_pdf("file.pdf")
+    st.markdown("""<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" width="400" height="400">""", unsafe_allow_html=True)
+
+#    show_pdf("file.pdf")
 
 with right:
     # st.header("Aquí irán los conceptos y sus explicaciones")
