@@ -1,6 +1,5 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
-from pdf_miner import *
 
 st.set_page_config(layout="centered", page_icon="☕", page_title="Tea-chr", initial_sidebar_state="collapsed", menu_items={
         'Get Help': 'https://www.extremelycoolapp.com/help',
