@@ -28,7 +28,7 @@ def show_pdf(file_path):
 
 st.set_page_config(layout="wide", page_icon="👨‍💼", page_title="Tea-chr", initial_sidebar_state="collapsed")
 if st.button(label="Home"):
-    switch_page("streamlit")
+    switch_page("main_page")
 st.title("☕ Tea-chr")
 st.markdown("## A tool that gives you the *big picture* before diving into what is **important**")
 st.markdown("-----------------------------------")
