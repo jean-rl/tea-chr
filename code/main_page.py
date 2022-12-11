@@ -7,7 +7,7 @@ st.set_page_config(layout="centered", page_icon="☕", page_title="Tea-chr", ini
         'About': "# This is a header. This is an *extremely* cool app!"
     })
 st.title("☕ Tea-chr")
-st.header("A tool to give you background before reading a paper")
+st.header("A tool that helps you build background before reading a scientific paper 🧑‍💻")
 
 st.markdown("Are you about to start reading a paper about a new topic? This tool is perfect for begginer researchers that want to have the background before jumping to the full topic")
 
