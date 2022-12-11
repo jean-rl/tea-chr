@@ -41,7 +41,7 @@ st.info('Note: For now only Firefox browser renders the PDF without warning. Pla
 with left:
     st.header("Your paper")
     st.markdown("Read the paper in this page")
-    st.markdown("""<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=~/file.pdf" width="700" height="950">""", unsafe_allow_html=True)
+    st.markdown("""<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://arxiv.org/pdf/2212.04485.pdf" width="700" height="950">""", unsafe_allow_html=True)
 
 #    show_pdf("file.pdf")
 
