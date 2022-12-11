@@ -47,7 +47,7 @@ with left:
     show_pdf("file.pdf")
 
 text = extract_text_from_pdf("file.pdf")
-topic_model = BERTopic.load("../models/topic_model-tiny")
+topic_model = BERTopic.load("../../models/topic_model-tiny")
 topics, _ = topic_model.transform(text)
 
 for topic in set(topics):
