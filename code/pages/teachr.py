@@ -36,6 +36,8 @@ st.markdown("-----------------------------------")
 left, right = st.columns([3,2])
 # left, right = st.columns([3,1]) Try this if you need more space for PDF displaying
 
+st.info('Note: For now only Firefox browser renders the PDF without warning. Plase use it for full demonstration purposes.', icon="ℹ️")
+
 with left:
     st.header("Your paper")
     st.markdown("Read the paper in this page")
