@@ -10,29 +10,6 @@ from extractdata import extract_text_from_pdf
 from bertopic import BERTopic
 import os
 
-"""from google.oauth2 import service_account
-from google.cloud import storage"""
-
-"""# Create API client.
-credentials = service_account.Credentials.from_service_account_info(
-    st.secrets["gcp_service_account"]
-)
-client = storage.Client(credentials=credentials)"""
-
-#@st.experimental_memo(ttl=600)
-
-"""def read_file(bucket_name, file_path):
-    bucket = client.bucket(bucket_name)
-    content = bucket.blob(file_path).download_as_string().decode("utf-8")
-    #content = bucket.blob(file_path)
-    return content"""
-
-#bucket_name = "streamlit-bucket-teachr"
-#file_pathx = "topic_model-small"
-
-#content = read_file(bucket_name, file_pathx)
-#st.write("pass")
-
 #function to display the PDF of a given file 
 def displayPDF(file):
     # Opening file from file path. this is used to open the file from a website rather than local
